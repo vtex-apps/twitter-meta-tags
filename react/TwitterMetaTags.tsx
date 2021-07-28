@@ -30,9 +30,10 @@ function TwitterMetaTags() {
     },
   } = productContext
 
-  const protocol = canUseDOM ? window.location.protocol : ''
-  const hostname = canUseDOM ? window.location.hostname : ''
-  const pathname = canUseDOM ? window.location.pathname : ''
+
+  const protocol = canUseDOM && window.location.protocol
+  const hostname = canUseDOM && window.location.hostname
+  const pathname = canUseDOM && window.location.pathname
   const url = `${protocol}://${hostname}${pathname}`
 
   const metaTags: MetaTag[] = [
