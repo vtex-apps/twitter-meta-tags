@@ -38,7 +38,7 @@ function TwitterMetaTags() {
 
   const metaTags: MetaTag[] = [
     { property: 'twitter:card', content: twitterCard },
-    { property: 'twitter:site', content: `@${twitterUsername}` },
+    { property: 'twitter:site', content: twitterUsername.startsWith('@') ? twitterUsername : `@${twitterUsername}` },
     { property: 'twitter:title', content: productName },
     { property: 'twitter:description', content: description },
     { property: 'twitter:image', content: firstImage.imageUrl },
